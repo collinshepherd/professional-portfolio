@@ -1,0 +1,166 @@
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* All of the types of each element */
+body {
+  background-color: #101820;
+  color: #fee715;
+  font-family: "Martian Mono", monospace;
+}
+
+/* For the header element */
+header {
+  margin: 1.5em;
+}
+
+/* For the unordered list inside of the header */
+nav ul {
+  display: flex;
+  position: relative;
+  bottom: 75px;
+  list-style-type: none;
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-size: 20px;
+}
+
+/* for the list items within the header element */
+nav li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+/* For all of the h1 elements used */
+h1 {
+  display: inline-block;
+  font-size: 2em;
+}
+/* For all of the h2 elements used */
+h2 {
+  font-size: 2em;
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  padding: 10px;
+}
+/* For all of the h3 elements used */
+h3 {
+  font-size: 2em;
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  padding: 10px;
+  margin-left: 3%;
+}
+/* For all of the h4 elements used */
+h4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+a {
+  color: #54b3d6;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  text-decoration-line: underline;
+  color: white;
+}
+
+figure {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+#projects article:first-child {
+  flex: 1 0 100%;
+}
+
+article {
+  position: relative;
+  flex: 1 0 50%;
+}
+
+#big-project-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+.project-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#about-me {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  padding: 2% 2% 5% 2%;
+}
+
+#about-me-text {
+  display: flex;
+  margin-left: 2rem;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    text-align: center;
+    justify-content: center;
+  }
+
+  h3 {
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    float: none;
+    bottom: 0px;
+  }
+  & li {
+    margin: 1%;
+  }
+  #about-me {
+    flex-direction: column;
+  }
+
+  #projects {
+    display: block;
+  }
+
+  #big-project-image {
+    width: 75%;
+  }
+}
