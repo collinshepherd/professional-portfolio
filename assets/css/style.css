@@ -57,14 +57,10 @@ h3 {
   padding: 10px;
   margin-left: 3%;
 }
-/* For all of the h4 elements used */
-h4 {
-  margin-bottom: 10px;
-  text-align: center;
-}
 
 h5 {
-  font-size: 20px;
+  font-size: 2em;
+  margin-left: 2%;
 }
 
 a {
@@ -86,27 +82,50 @@ figure {
   background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
-#projects article:first-child {
-  flex: 1 0 100%;
-}
-
 article {
   position: relative;
   flex: 1 0 50%;
+  margin-bottom: 10px;
 }
 
-#big-project-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 35%;
+#contact-me {
+  margin-top: 10vh;
+}
+
+#contact-me ul {
+  display: flex;
+  position: relative;
+  bottom: 75px;
+  list-style-type: none;
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-size: 20px;
+}
+
+#contact-me li {
+  display: inline-block;
+  margin-left: 25px;
+  margin-bottom: 1vh;
 }
 
 .project-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  min-width: 30%;
+  max-width: 50%;
+  margin-top: 10px;
+}
+
+#big-project-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  margin-top: 0px;
+  border: 5px solid cyan;
+  margin-bottom: 5vh;
 }
 
 #about-me {
@@ -126,20 +145,29 @@ article {
   flex-wrap: wrap;
 }
 
+#projects a {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  margin-bottom: -5vh;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  position: relative;
+  top: inherit;
+  right: inherit;
+  background-color: cyan;
+  border: 15px solid cyan;
+  color: black;
+  font-size: 1.2vw;
+}
+
 @media screen and (max-width: 992px) {
-}
-
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 600px) {
-  h2 {
+  header {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    justify-content: center;
-  }
-
-  h3 {
-    justify-content: center;
   }
 
   nav ul {
@@ -152,6 +180,56 @@ article {
   & li {
     margin: 1%;
   }
+
+  #projects a {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    text-align: center;
+    justify-content: center;
+  }
+
+  h3 {
+    justify-content: center;
+  }
+
+  h5 {
+    text-align: center;
+  }
+
+  #contact-me {
+    margin-bottom: 50px;
+  }
+
+  #contact-me ul {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    float: none;
+    bottom: 0px;
+  }
+  & li {
+    margin: 1%;
+  }
+
+  .project-image {
+    width: 250px;
+    height: 250px;
+    object-fit: fill;
+    max-width: fit-content;
+    max-height: fit-content;
+  }
+
+  #big-project-image {
+    width: 400px;
+    height: 400px;
+    object-fit: fill;
+    max-width: fit-content;
+  }
+
   #about-me {
     flex-direction: column;
   }
