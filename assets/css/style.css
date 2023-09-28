@@ -59,6 +59,7 @@ h5 {
 a {
   color: #54b3d6;
   transition: color 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 a:hover {
@@ -98,8 +99,12 @@ figure {
 
 #about-me-text {
   display: flex;
+  font-size: 1.2em;
   margin-right: 5vw;
+  padding-left: 1vw;
+  margin-bottom: 10vh;
   border-left: 5px solid black;
+  text-align: center;
 }
 
 #projects {
@@ -110,6 +115,38 @@ figure {
   text-align: right;
   width: 100vw;
   height: 90vh;
+}
+
+#projects #project1 a {
+  border-radius: 10%;
+  border: 10px solid cyan;
+  background-color: cyan;
+  color: #101820;
+  float: left;
+  position: relative;
+  top: 47.5vh;
+}
+
+#project2 a {
+  border-radius: 10%;
+  border: 10px solid cyan;
+  background-color: cyan;
+  color: #101820;
+  float: left;
+  position: relative;
+  left: 2vw;
+  top: 22.5vh;
+}
+
+#project3 a {
+  border-radius: 10%;
+  border: 10px solid cyan;
+  background-color: cyan;
+  color: #101820;
+  float: left;
+  position: relative;
+  left: 2vw;
+  top: 22.5vh;
 }
 
 #projects h3 {
@@ -207,17 +244,30 @@ figure {
     text-align: center;
   }
 
+  #about-me {
+    margin-bottom: 80vh;
+  }
+
   #about-me-text {
     border: 0px solid black;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1vh;
+  }
+
+  #about-me img {
+    display: flex;
+    position: relative;
+    width: 42.5vw;
+    height: 65vh;
+    left: 28%;
   }
 
   #work {
     border: 0px solid black;
     text-align: center;
-    padding-top: 5vh;
+    padding-top: 1vh;
   }
 
   #projects h3 {
@@ -262,6 +312,7 @@ figure {
     padding: 0px;
     width: 100vw;
     height: 480px;
+    border-top: 5px solid black;
   }
 
   #project2 {
