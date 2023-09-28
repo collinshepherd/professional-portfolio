@@ -42,20 +42,13 @@ h1 {
 }
 /* For all of the h2 elements used */
 h2 {
-  font-size: 2em;
-  display: flex;
-  justify-content: right;
-  text-align: right;
-  padding: 10px;
+  font-size: 3em;
+  padding-left: 110px;
 }
 /* For all of the h3 elements used */
 h3 {
-  font-size: 2em;
-  display: flex;
-  justify-content: right;
-  text-align: right;
-  padding: 10px;
-  margin-left: 3%;
+  font-size: 3em;
+  margin-left: 144px;
 }
 
 h5 {
@@ -82,10 +75,72 @@ figure {
   background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
-article {
+.project-image {
+  width: 32.5vw;
+  height: 25vh;
+}
+
+#about-me {
+  display: flex;
+  text-align: right;
+  height: 25vh;
+  width: 100vw;
+  margin-bottom: 7vh;
+}
+
+#about-me img {
+  display: flex;
   position: relative;
-  flex: 1 0 50%;
-  margin-bottom: 10px;
+  margin-right: 5vw;
+  width: 15vw;
+  height: 30vh;
+}
+
+#about-me-text {
+  display: flex;
+  margin-right: 5vw;
+  border-left: 5px solid black;
+}
+
+#projects {
+  display: grid;
+  gap: 2vh;
+  grid-template-columns: 14.8vw 35vw 35vw;
+  grid-template-rows: repeat(2, 1fr);
+  text-align: right;
+  width: 100vw;
+  height: 90vh;
+}
+
+#projects h3 {
+  grid-row: span 2;
+}
+
+#work {
+  border-right: 5px solid black;
+}
+
+#project1 {
+  margin-right: 5vw;
+  padding-left: 5vw;
+  width: 65vw;
+  height: 55vh;
+  grid-column: span 2;
+}
+
+#big-project-image {
+  width: 65vw;
+  height: 50vh;
+}
+
+#project2 {
+  width: 34.5vw;
+  height: 27vh;
+}
+
+#project3 {
+  width: 34.5vw;
+  height: 27vh;
 }
 
 #contact-me {
@@ -107,60 +162,6 @@ article {
   display: inline-block;
   margin-left: 25px;
   margin-bottom: 1vh;
-}
-
-.project-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 30%;
-  max-width: 50%;
-  margin-top: 10px;
-}
-
-#big-project-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
-  margin-top: 0px;
-  border: 5px solid cyan;
-  margin-bottom: 5vh;
-}
-
-#about-me {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  padding: 2% 2% 5% 2%;
-}
-
-#about-me-text {
-  display: flex;
-  margin-left: 2rem;
-}
-
-#projects {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#projects a {
-  text-decoration: none;
-  display: block;
-  font-weight: bold;
-  margin-bottom: -5vh;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  position: relative;
-  top: inherit;
-  right: inherit;
-  background-color: cyan;
-  border: 15px solid cyan;
-  color: black;
-  font-size: 1.2vw;
 }
 
 @media screen and (max-width: 992px) {
@@ -190,6 +191,12 @@ article {
   h2 {
     text-align: center;
     justify-content: center;
+    padding: 0px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    padding-bottom: 1vh;
+    border-bottom: 5px solid black;
   }
 
   h3 {
@@ -200,7 +207,25 @@ article {
     text-align: center;
   }
 
+  #about-me-text {
+    border: 0px solid black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #work {
+    border: 0px solid black;
+    text-align: center;
+    padding-top: 5vh;
+  }
+
+  #projects h3 {
+    grid-row: span 1;
+  }
+
   #contact-me {
+    margin-top: 40vh;
     margin-bottom: 50px;
   }
 
@@ -213,14 +238,53 @@ article {
   }
   & li {
     margin: 1%;
+    margin-bottom: 1.5vh;
   }
 
   .project-image {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     object-fit: fill;
     max-width: fit-content;
     max-height: fit-content;
+  }
+
+  #projects {
+    grid-template-columns: 0;
+    grid-template-rows: 4fr;
+  }
+
+  #project1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column: span 1;
+    padding: 0px;
+    width: 100vw;
+    height: 480px;
+  }
+
+  #project2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100vw;
+    height: 250px;
+    margin-bottom: 10vh;
+  }
+
+  #project3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100vw;
+    height: 250px;
+  }
+
+  #projects a {
+    height: fit-content;
   }
 
   #big-project-image {
@@ -232,13 +296,5 @@ article {
 
   #about-me {
     flex-direction: column;
-  }
-
-  #projects {
-    display: block;
-  }
-
-  #big-project-image {
-    width: 75%;
   }
 }
