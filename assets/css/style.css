@@ -50,12 +50,13 @@ h3 {
   font-size: 3em;
   margin-left: 144px;
 }
-
+/* For all of the h5 elements */
 h5 {
   font-size: 2em;
   margin-left: 2%;
 }
 
+/* These are for the link elements styling */
 a {
   color: #54b3d6;
   transition: color 0.3s ease-in-out;
@@ -67,6 +68,7 @@ a:hover {
   color: white;
 }
 
+/* Contains the background image below the header  */
 figure {
   height: 150px;
   width: 100%;
@@ -76,6 +78,7 @@ figure {
   background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
+/* Contains styling for the about me section of the webpage */
 .project-image {
   width: 32.5vw;
   height: 25vh;
@@ -107,6 +110,7 @@ figure {
   text-align: center;
 }
 
+/* Container for the work section setting up a grid style for all of the elements to fit the page nicely */
 #projects {
   display: grid;
   gap: 2vh;
@@ -183,6 +187,8 @@ figure {
   height: 27vh;
 }
 
+/* Styling the footer to fit nicely along the page and display everything clearly */
+
 #contact-me {
   margin-top: 10vh;
 }
@@ -203,6 +209,8 @@ figure {
   margin-left: 25px;
   margin-bottom: 1vh;
 }
+
+/* media screen to convert certain flex rows to flex columns as well as certain font sizes to fit the screen better */
 
 @media screen and (max-width: 992px) {
   header {
@@ -227,7 +235,9 @@ figure {
   }
 }
 
+/* Converts all elements to fit a mobile phone screen by reducing the amount of columns in grid templates and adjusting certain styling for flexboxes and text elements */
 @media screen and (max-width: 600px) {
+  /* Setting all h(n) elements to fit nicely on a mobile screen */
   h2 {
     text-align: center;
     justify-content: center;
@@ -243,45 +253,14 @@ figure {
     justify-content: center;
   }
 
-  #projects #project1 h4 {
-    border-radius: 10%;
-    border: 10px solid cyan;
-    background-color: cyan;
-    color: #101820;
-    float: left;
-    position: relative;
-    left: 1.5vw;
-    top: 42.8vh;
-  }
-
-  #project2 h4 {
-    border-radius: 10%;
-    border: 10px solid cyan;
-    background-color: cyan;
-    color: #101820;
-    float: left;
-    position: relative;
-    left: 2vw;
-    top: 35.5vh;
-  }
-
-  #project3 h4 {
-    border-radius: 10%;
-    border: 10px solid cyan;
-    background-color: cyan;
-    color: #101820;
-    float: left;
-    position: relative;
-    left: 2vw;
-    top: 33.5vh;
-  }
-
   h5 {
     text-align: center;
   }
 
+  /* Converting the about me section into a flex-direction column to fit nicely on the page as well as other styling */
   #about-me {
     margin-bottom: 80vh;
+    flex-direction: column;
   }
 
   #about-me-text {
@@ -300,33 +279,7 @@ figure {
     left: 28%;
   }
 
-  #work {
-    border: 0px solid black;
-    text-align: center;
-    padding-top: 1vh;
-  }
-
-  #projects h3 {
-    grid-row: span 1;
-  }
-
-  #contact-me {
-    margin-top: 70vh;
-    margin-bottom: 50px;
-  }
-
-  #contact-me ul {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    float: none;
-    bottom: 0px;
-  }
-  & li {
-    margin: 1%;
-    margin-bottom: 1.5vh;
-  }
-
+  /* Setting up the work section of the webpage to fit nicely on a mobile screen by setting the image sizes to be smaller as well as fixing certain sizing issues */
   .project-image {
     width: 300px;
     height: 300px;
@@ -381,7 +334,64 @@ figure {
     max-width: fit-content;
   }
 
-  #about-me {
+  #work {
+    border: 0px solid black;
+    text-align: center;
+    padding-top: 1vh;
+  }
+
+  #projects #project1 h4 {
+    border-radius: 10%;
+    border: 10px solid cyan;
+    background-color: cyan;
+    color: #101820;
+    float: left;
+    position: relative;
+    left: 1.5vw;
+    top: 42.8vh;
+  }
+
+  #project2 h4 {
+    border-radius: 10%;
+    border: 10px solid cyan;
+    background-color: cyan;
+    color: #101820;
+    float: left;
+    position: relative;
+    left: 2vw;
+    top: 35.5vh;
+  }
+
+  #project3 h4 {
+    border-radius: 10%;
+    border: 10px solid cyan;
+    background-color: cyan;
+    color: #101820;
+    float: left;
+    position: relative;
+    left: 2vw;
+    top: 33.5vh;
+  }
+
+  #projects h3 {
+    grid-row: span 1;
+  }
+
+  /* Making the footer display as a column instead of a row so it all fits nicely on the bottom of a mobile screen */
+  #contact-me {
+    margin-top: 70vh;
+    margin-bottom: 50px;
+  }
+
+  #contact-me ul {
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    float: none;
+    bottom: 0px;
+  }
+  & li {
+    margin: 1%;
+    margin-bottom: 1.5vh;
   }
 }
